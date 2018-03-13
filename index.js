@@ -57,6 +57,12 @@ function removeFromCart(item) {
 
 function placeOrder(cardNumber) {
   if(cardNumber){
+    var arrSum = 0;
+    for(var i=0; i<cart.length; i++){
+      arrSum += cart[i].itemPrice;
+    }
+    
+    return `Your total cost is ${arrSum}`;
     cart.splice(0, cart.length);
     
   }
